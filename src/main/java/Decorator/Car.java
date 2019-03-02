@@ -8,12 +8,11 @@ import java.math.BigDecimal;
 public interface Car {
 
     int getMaxSpeed();
-    BigDecimal price();
+    int price();
 
     default void writeSpeed() {
         System.out.println("Predkosc to: " + getMaxSpeed());
     }
 
-    BigDecimal getPrice(
-    );
+    int getPrice();
 }

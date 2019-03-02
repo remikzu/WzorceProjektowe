@@ -17,7 +17,7 @@ public abstract class CarDecorator {
         return car.getMaxSpeed();
     }
 
-    public BigDecimal getPrice() {
+    public int getPrice() {
         return car.getPrice();
     }
 

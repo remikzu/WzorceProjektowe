@@ -7,7 +7,7 @@ import java.math.BigDecimal;
  */
 public class Truck implements Car {
 
-    private BigDecimal price = BigDecimal.valueOf(10000);
+    private int price = 10000;
     private int speed = 50;
 
     @Override
@@ -16,12 +16,12 @@ public class Truck implements Car {
     }
 
     @Override
-    public BigDecimal price() {
+    public int price() {
         return price;
     }
 
     @Override
-    public BigDecimal getPrice() {
+    public int getPrice() {
         return price();
     }
 }
