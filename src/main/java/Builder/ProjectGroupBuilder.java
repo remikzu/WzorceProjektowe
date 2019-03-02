@@ -8,12 +8,12 @@ import java.util.List;
  */
 public class ProjectGroupBuilder {
 
-    EmployeeManager employeeManager = EmployeeManager.getInstance();
 
-    ProjectGroup buildProjectGroup(Project project, int nrOfProgrammers, int nrOfTesters, int nrOfPMs) {
+
+    public static ProjectGroup buildProjectGroup(Project project, int nrOfProgrammers, int nrOfTesters, int nrOfPMs) {
 
         ProjectGroup group = new ProjectGroup(project);
-
+        EmployeeManager employeeManager = EmployeeManager.getInstance();
         List<Employee> programmers = employeeManager.getEmployees(EmployeeType.PROGRAMMER);
         List<Employee> testers = employeeManager.getEmployees(EmployeeType.TESTER);
         List<Employee> pms = employeeManager.getEmployees(EmployeeType.ProjectManager);
@@ -63,6 +63,6 @@ public class ProjectGroupBuilder {
                 group.employeesInProject.add(pm);
             }
         }
-        return null;
+        return group;
     }
 }
