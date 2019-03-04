@@ -11,5 +11,6 @@ public interface Employee {
     Project getCurrentProject();
     EmployeeType getEmployeeType();
     void setCurrentProject(Project currentProject);
+    void execute();
 
 }

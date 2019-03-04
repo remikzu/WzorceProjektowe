@@ -34,4 +34,9 @@ public class ProjectManager implements Employee{
     public void setCurrentProject(Project currentProject) {
         this.currentProject = currentProject;
     }
+
+    @Override
+    public void execute() {
+        System.out.println(currentProject);
+    }
 }
